@@ -15,7 +15,7 @@ nltk.download('wordnet')
 app = Flask(__name__)
 
 # Cargar los datos
-data = pd.read_csv('books5.csv', index_col=False)
+data = pd.read_csv('books5.csv')
 # Preprocesamiento
 en_stopwords = stopwords.words("english")
 lemma = WordNetLemmatizer()
