@@ -1,21 +1,20 @@
-# Directorio de trabajo
+# Directorio de trabajo temporal
 WORKDIR="/tmp/kafka-consumer"
 
 # Clonar el repositorio
 git clone https://github.com/MariaCutipa/ExamenDAEA.git $WORKDIR
 
-# Cambiar al directorio del repositorio
-cd $WORKDIR/NetKafka
+# Cambiar al directorio del proyecto que contiene el Dockerfile
+cd $WORKDIR/NetKafka/consumidor
 
 # Construir la imagen Docker
-sudo docker build -t consumidorNet .
+docker build -t consumidor .
 
-# Ejecutar el contenedor con la aplicación Blazor
-docker run -it consumidorNet
+# Ejecutar el contenedor con la aplicación
+docker run -it consumidor
 
-# Eliminar los archivos clonados después de la ejecución 
+# Eliminar los archivos clonados después de la ejecución
 cd /tmp
 rm -rf $WORKDIR
-
 
 
