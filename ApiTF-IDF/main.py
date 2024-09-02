@@ -31,7 +31,7 @@ def clean(text):
 
 
 # Crear columna 'Description' combinando columnas relevantes
-data['Description'] = data['Name'] + ' ' + data['Synopsis']
+data['Description'] = data['Name'] + ' ' + data['Synopsis'] + ' ' + data['Summary']
 data['Description'] = data['Description'].apply(clean)
 
 # Vectorización de TF-IDF
@@ -84,6 +84,7 @@ def recomendacion(termino):
             "Genre": data.loc[i, "Genre"],
             "Synopsis": data.loc[i, "Synopsis"],
             "Author": data.loc[i, "Author"],
+            "Summary": data.loc[i, "Summary"],
             "Score": score,
             "Description": data.loc[i, "Description"],
         })
