@@ -5,7 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        string brokerList = "ec2-3-91-157-108.compute-1.amazonaws.com:9092"; // Dirección de tu broker de Kafka
+        string brokerList = "ec2-3-94-119-156.compute-1.amazonaws.com:9092"; // Dirección de tu broker de Kafka
         string topic = "products-topic"; // Nombre del topic en Kafka
 
         var config = new ConsumerConfig
